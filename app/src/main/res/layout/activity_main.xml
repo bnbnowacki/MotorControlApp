@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textNaglowek"
+        android:text="Moja Apka Motor"
+        android:textSize="30sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Połącz!"
+        android:id="@+id/btConnect"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/textNaglowek"
+        android:onClick="ClickPolacz"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btWyslij"
+        android:text="Przód"
+        android:layout_below="@id/btConnect"
+        android:layout_centerHorizontal="true"
+        android:onClick="ClickWyslij"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:layout_below="@id/btWyslij"
+        android:layout_centerHorizontal="true"
+        android:onClick="ClickStop"
+        android:id="@+id/btStop"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lewo"
+        android:layout_below="@id/btWyslij"
+        android:id="@+id/btLewo"
+        android:onClick="ClickLewo"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prawo"
+        android:layout_below="@id/btWyslij"
+        android:layout_alignParentRight="true"
+        android:onClick="ClickPrawo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tył"
+        android:id="@+id/btTyl"
+        android:layout_below="@id/btStop"
+        android:layout_centerHorizontal="true"
+        android:onClick="ClickTyl"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btTyl"
+        android:layout_marginTop="30dp"
+        android:id="@+id/seekBar"
+        android:max="100"
+        android:indeterminate="false" />
+
+</RelativeLayout>
